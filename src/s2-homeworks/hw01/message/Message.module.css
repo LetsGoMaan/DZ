@@ -1,31 +1,71 @@
 .message {
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    justify-content: end;
 
 }
 
 .imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10px;
 
 }
 
 .imageAndText img {
-
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
 }
 
 .text {
-
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #0059b3;
+    color: #FFFFFF;
+    position: relative;
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 10px;
 }
 
-.text:after {
-
+.text::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 246px; bottom: 0; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid  #0059b3; /* Добавляем треугольник */
 }
-
 .name {
-
+    display: flex;
+    justify-content: end;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .messageText {
-
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .time {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
 
 }

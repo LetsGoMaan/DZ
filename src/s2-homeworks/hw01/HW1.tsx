@@ -3,7 +3,8 @@ import Message from './message/Message'
 import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
-import avatar from './avatar.png'
+import avatar1 from './avatar1.jpg'
+import avatar2 from './avatar2.jpg'
 
 /*
 * 1 - описать тип MessageType
@@ -13,29 +14,44 @@ import avatar from './avatar.png'
 * 5 - сделать стили в соответствии с дизайном
 * */
 
+type UserType = {
+    avatar: string
+    name: string
+}
+
+type DialogType = {
+    text: string
+    time: string
+}
 // нужно создать правильный тип вместо any
-export type MessageType = any
+export type MessageType = {
+    id: number
+
+    user: UserType
+
+    message: DialogType
+}
 
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        avatar: avatar1, // можно менять
+        name: 'John Snow',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
+        text: 'Hey, are we going for a walk??', // можно менять
         time: '22:00', // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: avatar2, // можно менять
+        name: 'Daenerys Targaryen', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
+        text: 'But you don\'t know anything about props Jon Snow\'s .', // можно менять
         time: '22:00', // можно менять
     },
 }
@@ -43,7 +59,8 @@ export const friendMessage0: MessageType = {
 const HW1 = () => {
     return (
         <div id={'hw1'}>
-            <div className={s2.hwTitle}>Homework #1</div>
+            <div className={s2.hwTitle}>Hometask #1</div>
+            <div className={s2.hwLine}></div>
             <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
                 <div>
@@ -54,6 +71,7 @@ const HW1 = () => {
                 {/*для автоматической проверки дз (не менять)*/}
                 <MessageSender M={Message} />
             </div>
+            <div className={s2.hwLine2}></div>
         </div>
     )
 }
