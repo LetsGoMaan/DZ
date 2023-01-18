@@ -14,7 +14,7 @@
 .friendImageAndText img {
     width: 48px;
     height: 48px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .friendText {
@@ -34,9 +34,10 @@
 .friendText:after {
     content: '';
     position: absolute; /* Абсолютное позиционирование */
-    left: -10px; bottom: 0; /* Положение треугольника */
+    left: -10px;
+    bottom: 0; /* Положение треугольника */
     border: 10px solid transparent; /* Прозрачные границы */
-    border-bottom: 10px solid  #F5F7FB; /* Добавляем треугольник */
+    border-bottom: 10px solid #F5F7FB; /* Добавляем треугольник */
 }
 
 .friendName {

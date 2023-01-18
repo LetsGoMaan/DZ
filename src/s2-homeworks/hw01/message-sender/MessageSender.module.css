@@ -2,10 +2,11 @@
     position: relative;
     margin-top: 55px;
     margin-left: 70px;
+    display: flex;
 }
 
 .textarea {
-    text-align:left;
+    text-align: left;
     padding: 10px;
     width: 976px;
     height: 40px !important;
@@ -32,6 +33,7 @@
 .button:hover {
     background-color: red;
 }
+
 .button:active {
     background-color: #00cc22;
 }

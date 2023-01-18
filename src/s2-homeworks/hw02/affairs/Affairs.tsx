@@ -1,26 +1,30 @@
-import React from 'react'
+import React, {Dispatch, SetStateAction} from 'react'
 import Affair from './affair/Affair'
-import {AffairType, FilterType} from '../HW2'
+import {AffairType, filterAffairs, FilterType} from '../HW2'
 import s from './Affairs.module.css'
+import s2 from "../../../s1-main/App.module.css";
 
 type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
-    deleteAffairCallback: any
+    data: Array<AffairType> // need to fix any
+    setFilter: Dispatch<SetStateAction<FilterType>>
+    deleteAffairCallback: (id: number) => void
     filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
     const setAll = () => {
-        // need to fix
+        props.setFilter('all');
     }
     const setHigh = () => {
+        props.setFilter('high');
         // need to fix
     }
     const setMiddle = () => {
+        props.setFilter('middle');
         // need to fix
     }
     const setLow = () => {
+        props.setFilter('low');
         // need to fix
     }
 
@@ -34,16 +38,19 @@ function Affairs(props: AffairsPropsType) {
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
+            
         />
     ))
 
     return (
         <div>
+
             <div className={s.buttonContainer}>
                 <button
                     id={'hw2-button-all'}
                     onClick={setAll}
                     className={cnAll}
+
                 >
                     All
                 </button>
@@ -51,6 +58,7 @@ function Affairs(props: AffairsPropsType) {
                     id={'hw2-button-high'}
                     onClick={setHigh}
                     className={cnHigh}
+
                 >
                     High
                 </button>
@@ -58,6 +66,7 @@ function Affairs(props: AffairsPropsType) {
                     id={'hw2-button-middle'}
                     onClick={setMiddle}
                     className={cnMiddle}
+
                 >
                     Middle
                 </button>
@@ -65,11 +74,13 @@ function Affairs(props: AffairsPropsType) {
                     id={'hw2-button-low'}
                     onClick={setLow}
                     className={cnLow}
+
                 >
                     Low
                 </button>
             </div>
             <div className={s.affairs}>{mappedAffairs}</div>
+            <div className={s2.hwLine}></div>
         </div>
     )
 }

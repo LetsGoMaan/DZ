@@ -9,14 +9,14 @@
 .imageAndText {
     display: flex;
     flex-direction: row-reverse;
-    margin-right: 10px;
+    margin-right: 70px;
 
 }
 
 .imageAndText img {
     width: 48px;
     height: 48px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .text {
@@ -36,10 +36,12 @@
 .text::after {
     content: '';
     position: absolute; /* Абсолютное позиционирование */
-    left: 246px; bottom: 0; /* Положение треугольника */
+    left: 246px;
+    bottom: 0; /* Положение треугольника */
     border: 10px solid transparent; /* Прозрачные границы */
-    border-bottom: 10px solid  #0059b3; /* Добавляем треугольник */
+    border-bottom: 10px solid #0059b3; /* Добавляем треугольник */
 }
+
 .name {
     display: flex;
     justify-content: end;
@@ -60,7 +62,7 @@
 
 .time {
     position: absolute;
-    right: 20px;
+    right: 80px;
     top: 50px;
     font-family: 'Montserrat', serif;
     font-style: normal;
