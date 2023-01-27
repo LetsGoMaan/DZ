@@ -67,7 +67,7 @@ function HW2() {
     return (
         <div id={'hw2'}>
             <div className={s2.hwTitle2}>Hometask #2</div>
-            <div className={s2.hwLine}></div>
+            <div className={s2.hwLine3}></div>
             <div className={s2.hw}>
                 <Affairs
                     data={filteredAffairs}
@@ -76,6 +76,7 @@ function HW2() {
                     filter={filter}
                 />
             </div>
+            <div className={s2.hwLine2}></div>
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import React, {Dispatch, SetStateAction} from 'react'
 import Affair from './affair/Affair'
-import {AffairType, filterAffairs, FilterType} from '../HW2'
+import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
-import s2 from "../../../s1-main/App.module.css";
+
 
 type AffairsPropsType = {
     data: Array<AffairType> // need to fix any
@@ -38,7 +38,7 @@ function Affairs(props: AffairsPropsType) {
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
-            
+
         />
     ))
 
@@ -80,7 +80,7 @@ function Affairs(props: AffairsPropsType) {
                 </button>
             </div>
             <div className={s.affairs}>{mappedAffairs}</div>
-            <div className={s2.hwLine}></div>
+
         </div>
     )
 }
