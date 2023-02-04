@@ -8,6 +8,7 @@
 
 .error {
 
+
 }
 
 .input {
@@ -16,6 +17,7 @@
     border-radius: 8px;
 
 }
+
 
 .input:focus {
     height: 36px;
@@ -60,4 +62,5 @@
 }
 
 .greeting {
+    margin-bottom: 205px;
 }
