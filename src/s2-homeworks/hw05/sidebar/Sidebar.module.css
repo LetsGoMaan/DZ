@@ -8,16 +8,44 @@
 }
 
 .nav {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+
 }
 
 .nav a {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #0059B2;
+
 }
 
 .nav a:hover {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #58ACFF;
 }
 
 .nav a.active {
+    color: #3D6B99;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
 }
+
 .close {
 }
 
