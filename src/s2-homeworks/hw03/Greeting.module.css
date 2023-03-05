@@ -15,7 +15,7 @@
     height: 36px;
     width: 372px;
     border-radius: 8px;
-
+    margin-bottom: 25px;
 }
 
 
@@ -62,5 +62,5 @@
 }
 
 .greeting {
-    margin-bottom: 205px;
+    margin-bottom: 245px;
 }
